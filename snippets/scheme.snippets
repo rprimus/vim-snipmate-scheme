@@ -1,0 +1,49 @@
+# binding
+
+snippet lambda
+	(lambda (${1:formals})
+		(${2:exp}))
+
+# local binding
+
+snippet let one-declaration
+	(let ((${1:name} ${2:declaration}))
+		${3:body})
+
+snippet let two-declarations
+	(let ((${1:name1} ${2:declaration1})
+				(${3:name2} ${4:declaration2}))
+		${5:body})
+
+snippet let three-declarations
+	(let ((${1:name1} ${2:declaration1})
+				(${2:name2} ${3:declaration2})
+				(${4:name2} ${5:declaration2}))
+		${6:body})
+
+# variable definitions
+
+snippet define regular
+	(define (${1:name} ${2:args})
+		${3:code})
+
+snippet define lambda
+	(define ${1:name}
+    (lambda (${2:args})
+      ${3:code}))
+
+# procedure application
+snippet proc
+(${1:procedure} ${2:args})
+
+# Conditionals
+
+snippet if
+	(if ${1:conditional} ${2:true} ${3:false})
+
+snippet cond
+	(cond 
+		((${1:condition1}) (${2:code1}))
+		((${3:condition2}) (${4:code2}))
+		(else (${5:else})))
+	
