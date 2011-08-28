@@ -1,6 +1,6 @@
 # binding
 
-snippet lambda
+snippet lam
 	(lambda (${1:formals})
 		(${2:exp}))
 
@@ -23,11 +23,11 @@ snippet let three-declarations
 
 # variable definitions
 
-snippet define regular
+snippet def regular
 	(define (${1:name} ${2:args})
 		${3:code})
 
-snippet define lambda
+snippet def lambda
 	(define ${1:name}
     (lambda (${2:args})
       ${3:code}))
