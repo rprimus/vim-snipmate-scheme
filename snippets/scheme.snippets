@@ -46,3 +46,16 @@ snippet cond
 		((${3:condition2}) (${4:code2}))
 		(else (${5:else})))
 
+# boolean tests
+snippet eq eq?
+	(eq? (${1:s-exp}) (${2:s-exp}))
+snippet eq eqv?
+	(eqv? (${1:s-exp}) (${2:s-exp}))
+snippet eq equal?
+	(equal? (${1:s-exp}) (${2:s-exp}))
+
+snippet and
+	(and (${1:s-exp}) (${2:s-exp}))
+
+snippet or
+	(or (${1:s-exp}) (${2:s-exp}))
