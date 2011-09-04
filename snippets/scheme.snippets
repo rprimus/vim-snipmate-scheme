@@ -37,7 +37,9 @@ snippet beg
 	(begin${1:exp1} ${2:exp2})
 	
 # Conditionals
-snippet if
+snippet if simple
+	(if ${1:conditional} ${2:true})
+snippet if alternative
 	(if ${1:conditional} ${2:true} ${3:false})
 
 snippet cond
@@ -45,6 +47,12 @@ snippet cond
 		((${1:condition1}) (${2:code1}))
 		((${3:condition2}) (${4:code2}))
 		(else (${5:else})))
+
+snippet case
+	(case ${1:exp0}
+		((${2:kea}y) ${3:exp1})
+		((${4:key})  ${5:exp1})
+		(else)  ${6:exp1} exp2)
 
 # boolean tests
 snippet eq eq?
@@ -54,8 +62,43 @@ snippet eq eqv?
 snippet eq equal?
 	(equal? (${1:s-exp}) (${2:s-exp}))
 
+snippet test procedure?
+	(procedure? ${1:exp})
+snippet test boolean?
+	(boolean? ${1:exp})
+snippet test null?
+	(null? ${1:exp})
+snippet test pair?
+	(pair? ${1:exp})
+snippet test number?
+	(number? ${1:exp})
+snippet test complex?
+	(complex? ${1:exp})
+snippet test real?
+	(real? ${1:exp})
+snippet test rational?
+	(rational? ${1:exp})
+snippet test complex?
+	(complex? ${1:exp})
+snippet test char?
+	(char? ${1:exp})
+snippet test string?
+	(string? ${1:exp})
+snippet test vector?
+	(vector? ${1:exp})
+snippet test synbol?
+	(synbol? ${1:exp})
+
 snippet and
 	(and (${1:s-exp}) (${2:s-exp}))
 
 snippet or
 	(or (${1:s-exp}) (${2:s-exp}))
+
+snippet no
+	(not (${1:obj}))
+
+snippet call
+	(call/cc
+		(lambda (k)
+			${1:code}))
